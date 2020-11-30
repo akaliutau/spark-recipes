@@ -39,6 +39,9 @@ log4j.logger.org.apache.hadoop.util.ShutdownHookManager=OFF
 
 log4j.logger.org.apache.spark.util.ShutdownHookManager=OFF
 
+log4j.logger.org.apache.spark.SparkEnv=ERROR
+
+
 
 
 

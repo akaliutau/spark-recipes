@@ -1,5 +1,5 @@
 ﻿## About
-This module contains contains code written to demonstrate how to use databases along with Spark framework.
+This module contains code written to demonstrate how to use databases along with Spark framework.
 
 ## Building and Running the code
 
@@ -20,7 +20,7 @@ git clone https://github.com/akalu/spark-recipes
 
 2 cd spark-database
 
-3 Package application using sbt command
+3 Package application using maven command
 
 ```
 mvn clean package

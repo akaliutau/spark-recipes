@@ -1,5 +1,5 @@
 ﻿## About
-This module contains contains code written to demonstrate rudimentary functionality of Spark framework.
+This module contains code written to demonstrate rudimentary functionality of Spark framework.
 Usually it does not require extra functionality to run, such as external databases, etc
 
 ## Building and Running the code
@@ -18,7 +18,7 @@ git clone https://github.com/akalu/spark-recipes
 
 2. cd spark-core
 
-3. Package application using sbt command
+3. Package application using maven command
 
 ```
 mvn clean package
