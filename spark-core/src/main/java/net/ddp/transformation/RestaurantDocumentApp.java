@@ -40,10 +40,10 @@ public class RestaurantDocumentApp {
         SparkSession spark = SparkSession.builder().appName("Building a restaurant fact sheet").master("local").getOrCreate();
 
         // Ingests businesses into dataframe
-        Dataset<Row> businessDf = spark.read().format("csv").option("header", true).load("data/orangecounty_restaurants/businesses.CSV");
+        Dataset<Row> businessDf = spark.read().format("csv").option("header", true).load("data/orangecounty_restaurants/businesses.csv");
 
         // Ingests businesses into dataframe
-        Dataset<Row> inspectionDf = spark.read().format("csv").option("header", true).load("data/orangecounty_restaurants/inspections.CSV");
+        Dataset<Row> inspectionDf = spark.read().format("csv").option("header", true).load("data/orangecounty_restaurants/inspections.csv");
 
         // Shows at most 3 rows from the dataframe
         businessDf.show(3);
