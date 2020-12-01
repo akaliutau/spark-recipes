@@ -16,7 +16,6 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Ingesting a CSV with embedded JSON.
- * 
  * @author akalu
  */
 @Slf4j

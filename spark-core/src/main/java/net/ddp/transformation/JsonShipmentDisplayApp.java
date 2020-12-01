@@ -6,7 +6,6 @@ import org.apache.spark.sql.SparkSession;
 
 /**
  * Processing of invoices formatted using the schema.org format.
- * 
  * @author akalu
  */
 public class JsonShipmentDisplayApp {

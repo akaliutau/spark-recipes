@@ -29,7 +29,7 @@ mvn clean package
 ```
 spark-submit --class net.ddp.transformation.CsvToDataframeApp .\target\spark-core-1.0-SNAPSHOT.jar
 ```
-
+(choose appropriate class name as entry point)
 
 
 ## Notes

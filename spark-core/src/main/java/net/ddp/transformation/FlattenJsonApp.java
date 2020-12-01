@@ -12,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Automatic flattening of JSON structure in Spark.
- * 
  * @author akalu
  */
 @Slf4j

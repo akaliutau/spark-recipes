@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Building a nested document.
- * 
  * @author akalu
  */
 public class RestaurantDocumentApp {
