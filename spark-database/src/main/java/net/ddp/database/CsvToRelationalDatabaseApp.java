@@ -63,7 +63,7 @@ public class CsvToRelationalDatabaseApp {
         prop.setProperty("user", "tester");
         prop.setProperty("password", "spark3");
 
-        // Write in a table called ch02
+        // Write in a table called books
         df.write().mode(SaveMode.Overwrite).jdbc(dbConnectionUrl, "books", prop);
 
         log.info("Process complete");
