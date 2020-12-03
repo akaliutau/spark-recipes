@@ -14,6 +14,10 @@
 	<artifactId>spark-bigdata</artifactId>
 	<packaging>jar</packaging>
 
+	<properties>
+		<postgresql.version>42.1.4</postgresql.version>
+	</properties>
+
 	<dependencies>
 		<!-- Spark -->
 		<dependency>
@@ -28,7 +32,11 @@
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-mllib_${scala.version}</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
