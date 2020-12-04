@@ -10,8 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Lists the files based on the criteria we have defined like: recursivity,
- * maximum number of files,
- * @author jgp
+ * maximum number of files
+ * 
+ * @author akalu
  */
 @Slf4j
 public class RecursiveExtensionFilteredLister implements Serializable {
@@ -59,7 +60,7 @@ public class RecursiveExtensionFilteredLister implements Serializable {
         File f = new File(dir, name);
         if (f.isDirectory()) {
             if (recursive) {
-                list0(f);
+                list(f);
             }
             return false;
         } else {
@@ -76,7 +77,7 @@ public class RecursiveExtensionFilteredLister implements Serializable {
         if (this.startPath == null) {
             return false;
         }
-        return list0(new File(this.startPath));
+        return list(new File(this.startPath));
     }
 
     /**
@@ -92,7 +93,7 @@ public class RecursiveExtensionFilteredLister implements Serializable {
         return files;
     }
 
-    private boolean list0(File folder) {
+    private boolean list(File folder) {
         if (folder == null) {
             return false;
         }
