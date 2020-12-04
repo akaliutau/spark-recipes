@@ -31,5 +31,13 @@ spark-submit --class net.ddp.transformation.CsvToDataframeApp .\target\spark-cor
 ```
 (choose appropriate class name as entry point)
 
+Some apps needed the 3rd party libs for correct work, they can be added on classpath in the following manner:
+
+```
+spark-submit --jars ..\lib\metadata-extractor-2.10.1.jar,..\lib\xmpcore-5.1.3.jar --class net.ddp.datasource.PhotoMetadataIngestionApp .\target\spark-bigdata-1.0-SNAPSHOT.jar
+```
+
+Note, that all libraries are being copied to temporary spark directory along with jar-archive containing classes with worker code
+
 
 ## Notes

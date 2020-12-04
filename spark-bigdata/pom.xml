@@ -16,6 +16,7 @@
 
 	<properties>
 		<postgresql.version>42.1.4</postgresql.version>
+		<metadata-extractor.version>2.10.1</metadata-extractor.version>
 	</properties>
 
 	<dependencies>
@@ -36,6 +37,12 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql.version}</version>
+		</dependency>
+		<!-- Metadata -->
+		<dependency>
+			<groupId>com.drewnoakes</groupId>
+			<artifactId>metadata-extractor</artifactId>
+			<version>${metadata-extractor.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
