@@ -7,7 +7,7 @@ Prerequisites:
 
 You will need:
  * `git`
- * Apache Spark  
+ * Apache Spark 3.0.0+  
 
 1. Clone this project
 
