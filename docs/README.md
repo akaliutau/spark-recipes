@@ -16,7 +16,7 @@ What is it?
 
 *  One can quickly set up Spark with Maven and Eclipse. Spark does not need to be installed.
 
-*  Spark is not limited to the MapReduce algorithm: its API allows a lot of algorithms to be applied to data.
+*  Spark is not limited to the MapReduce algorithm: its API allows a lot of algorithms to be applied to data.
 
 *  Streaming is used more and more frequently in enterprises, as businesses want access to real-time analytics. Spark supports streaming.
 
