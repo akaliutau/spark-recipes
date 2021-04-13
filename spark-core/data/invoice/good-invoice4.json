@@ -8,7 +8,7 @@
 	"accountId": "xxxx-xxxx-xxxx-7563",
 	"customer": {
 		"@type": "Person",
-		"name": "Jean Georges Perrin"
+		"name": "John Smith"
 	},
 	"paymentDueDate": "2016-01-30",
 	"minimumPaymentDue": {

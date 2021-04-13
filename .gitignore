@@ -19,3 +19,4 @@ logs
 .test
 .env
 node.lock
+*.drawio

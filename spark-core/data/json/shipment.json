@@ -8,23 +8,19 @@
     "country": "USA"
   },
   "customer": {
-    "name": "Jean Georges Perrin",
+    "name": "Mark Thomas",
     "city": "Chapel Hill",
     "state": "North Carolina",
     "country": "USA"
   },
   "books": [
     {
-      "title": "Spark with Java",
+      "title": "React in Action",
       "qty": 2
     },
     {
-      "title": "Spark in Action, 2nd Edition",
+      "title": "React in Action, 2nd Edition",
       "qty": 25
-    },
-    {
-      "title": "Spark in Action, 1st Edition",
-      "qty": 1
     }
   ]
 }
