@@ -37,7 +37,7 @@ Dataframe
 *  In a JSON document, you can access nested fields by using a dot (.).
 *  [The API for the dataframe ](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/Dataset.html).
 *  [The API for the static methods ](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/functions.html)
-*  If you do not care about column names when you union two dataframes, use union(), overwise use unionByName().
+*  If you do not care about column names when you union two dataframes, use union(), overwise use unionByName().
 *  One can reuse POJOs directly in a dataset in Spark.
 *  An object must be serializable if you want to have it as part of a dataset.
 *  The dataset’s drop() method removes a column in the dataframe.
@@ -69,7 +69,7 @@ Driver
 ========
 
 *  Spark can work without ingesting data; it can generate its own data.
-*  Spark supports three execution modes: local mode, cluster mode, and interactive mode.
+*  Spark supports three execution modes: local mode, cluster mode, and interactive mode.
 *  Local mode allows developers to get started on Spark development in minutes.
 *  Cluster mode is used for production.
 *  You can submit a job to Spark or connect to the master.
@@ -78,21 +78,21 @@ Driver
 *  The execution takes place on the workers.
 *  Sparks handles the distribution of your application JAR in cluster mode, to each worker node.
 *  MapReduce is a common method to work on big data in distributed systems. On of its implementation is Hadoop, the Spark is the second one.
-*  Continuous integration and continuous delivery (CICD) is an agile methodology that encourages frequent integration and delivery.
+*  Continuous integration and continuous delivery (CICD) is an agile methodology that encourages frequent integration and delivery.
 *  Lambda functions, introduced in Java 8, allow you to have functions outside the scope of a class.
-*  An uber JAR contains all the classes (including the dependencies) of an application in a single file.
+*  An uber JAR contains all the classes (including the dependencies) of an application in a single file.
 *  Maven can build an uber JAR automatically.
 *  Maven can deploy your source code at the same time it deploys your JAR file.
 *  Spark’s map and reduce operations can use classes or lambda functions.
 *  Spark provides a web interface to analyze the execution of jobs and applications.
-*  Interactive mode allows you to type Scala, Python, or R commands directly in a shell. Interaction can also be achieved with the help of notebooks such as Jupyter or Zeppelin. 
+*  Interactive mode allows you to type Scala, Python, or R commands directly in a shell. Interaction can also be achieved with the help of notebooks such as Jupyter or Zeppelin. 
 
 Ingestion
 ==========
 
 Spark allows to ingest data from files. Alone with well-known file formats the specialized ones are supported such as:
 
-[Apache Avro](https://github.com/databricks/spark-avro) - was designed for remote procedure calls (RPCs) in a similar way as Protocol Buffers (Protobuf), a popular method for transferring serializable data developed and open sourced by Google; learn more at https://developers.google.com/protocol-buffers/.
+[Apache Avro](https://github.com/databricks/spark-avro) - was designed for remote procedure calls (RPCs) in a similar way as Protocol Buffers (Protobuf), a popular method for transferring serializable data developed and open sourced by Google; learn more at https://developers.google.com/protocol-buffers/.
 
 [Apache Optimized Row Columnar (ORC)](https://orc.apache.org/) - a columnar file format
 
@@ -104,13 +104,13 @@ Spark allows to ingest data from files. Alone with well-known file formats the s
 *  When ingesting files, you can use a regular expression (regex) to specify the path.
 *  CSV is more complex than it looks, but a rich set of options allows you to tune the parser.
 *  JSON exists in two forms: the one-line form called JSON Lines, and multiline JSON. Spark ingests both forms of JSON (since v2.2.0).
-*  All options for file ingestion that are described in this chapter are not casesensitive.
+*  All options for file ingestion that are described in this chapter are not casesensitive.
 *  Spark can ingest CSV, JSON, and text out of the box.
 *  To ingest XML, Spark needs a plugin provided by Databricks.
 *  The pattern for ingesting any document is fairly similar: you specify the format and simply read.
 *  Traditional file formats, including CSV, JSON, and XML, are not well suited for big data.
 *  JSON and XML are not considered splittable file formats.
-*  Avro, ORC, and Parquet are popular big data file formats. They embed the data and the schema in a file and compress the data. They are easier and more efficient to manipulate than CSV, JSON, and XML when it comes to big data.
+*  Avro, ORC, and Parquet are popular big data file formats. They embed the data and the schema in a file and compress the data. They are easier and more efficient to manipulate than CSV, JSON, and XML when it comes to big data.
 *  ORC and Parquet files are in a columnar format.
 *  Avro is row-based, which is more suitable for streaming.
 *  ORC and Parquet’s compression is better than Avro’s
