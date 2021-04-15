@@ -6,7 +6,7 @@ These are notes covering the most important aspects of Spark ecosystem, includin
 What is it?
 ===========
 
-*  Spark is an analytics distributed system; one can use it to process workloads and algorithms in a distributed way. And it's not only good for analytics: once can use Spark for data transfer, massive data transformation, log analysis, and more.
+*  [Spark](https://spark.apache.org/) is an analytics distributed system; one can use it to process workloads and algorithms in a distributed way. And it's not only good for analytics: once can use Spark for data transfer, massive data transformation, log analysis, and more.
 *  Spark supports SQL (natively SQL-92), Java, Scala, R, and Python (through PySpark) as a programming interface. The core is written in Scala.
 *  Spark's internal main data storage is the dataframe. The dataframe combines storage capacity with an API. The most close analog of dataframce could be data structure in BigColumn databases. From the API point of view due to its proximity to Java JDBC development, one can find similarities with a JDBC ResultSet.
 *  In Java, a dataframe is implemented as a Dataset<Row>.
@@ -19,6 +19,9 @@ What is it?
 Basics
 =======
 *  [Spark quick start](https://spark.apache.org/docs/latest/rdd-programming-guide.html)
+*  [Alternative Spark tutorial](https://www.datacamp.com/community/tutorials/apache-spark-tutorial-machine-learning)
+*  [15-min Spark tutorial](https://www.edureka.co/blog/spark-tutorial/)
+*  [Video tutorial](https://www.youtube.com/watch?v=QaoJNXW6SQo)
 *  The initial application built on the basis of Spark framework is the driver. Data may not have to come to the driver; it can be driven remotely.
 *  The driver connects to a master and gets a session. Data will be attached to this session; the session defines the life cycle of the data on the worker's nodes.
 *  The master can be local (on local machine) or a remote cluster. Using the local mode will not require you to build a cluster, making life much easier during development phase.
@@ -142,7 +145,7 @@ Additionally one can implement translator for custom dialect
 
 *  [List of extensions to Spark](https://spark-packages.org/)
 *  Direct connection to a data source from Spark offers these benefits: 
-(1) temporary files are not needed, (2) data quality/cleansing scripts can be written directly in Spark, and there is no need for JSON/CSV conversion.
+(1) temporary files are not needed, (2) data quality/cleansing scripts can be written directly in Spark, and consequently there is no need for JSON/CSV conversion.
 *  EXIF is an extension to JPEG (and other graphic formats) to store metadata about the image.
 *  A JavaBean is a small class that contains properties and accessor methods.
 *  When you develop a new data source, the ingestion code remains similar to generic data sources you've used with files or databases.
@@ -159,7 +162,7 @@ Additionally one can implement translator for custom dialect
 *  Starting a Spark session is the same whether you are in batch or streaming mode.
 *  Streaming is a different paradigm from batch processing. One way to see streaming, especially in Spark, is as microbatching.
 *  You define a stream on a dataframe by using the readStream() method followed by the start() method.
-*  You can specify ingestion format by using format(), and options by using option().
+*  You can specify ingestion format by using format() method, and options by using option() method.
 *  The streaming query object, StreamingQuery, will help you query the stream.
 *  The destination of the data in the query is called a sink. It can be specified by using the format() method or the forEach() method.
 *  The streamed data is stored in a result table.
@@ -228,7 +231,7 @@ Data aggregation
 *  The groupBy() method is the equivalent of the SQL GROUP BY statement.
 *  Data needs to be prepared and cleaned before performing aggregations. Those steps can be done via transformations (chapter 12).
 *  Aggregations can be performed by methods chained after the groupBy() method, or by static functions inside the agg() method.
-*  Spark’s aggregations can be extended by custom user-defined aggregation functions (UDAFs).
+*  Spark's aggregations can be extended by custom user-defined aggregation functions (UDAFs).
 *  A UDAF must be registered by name in your Spark session.
 *  A UDAF is called using the callUDF() method and the UDAF name.
 *  A UDAF is implemented as a class, which should implement several methods.
@@ -289,13 +292,13 @@ Data pipelines
 *  Just as Apache Spark can ingest data from multiple formats, it can export data in multiple formats.
 *  The key method for writing data from a dataframe to a file or database is write().
 *  The write() method behaves similarly to the read() method: you can specify the format() and several options via option().
-*  The save() method, which is linked to the dataframe’s write() method, is a counterpart to the read() method, which is linked to the dataframe’s load() method.
-*  You can specify the write mode with the mode() function.
+*  The save() method, which is linked to the dataframe's write() method, is a counterpart to the read() method, which is linked to the dataframe's load() method.
+*  One can specify the write mode with the mode() function.
 *  Exporting data will export data from each partition, potentially resulting in several files being created
 *  Delta Lake is a database that lives in the Spark environment. You can persist your dataframes in Delta Lake (aka Data Lake)
 *  You can use the coalesce() method or the repartition() method to reduce the number of partitions.
 *  Apache Spark can access data stored in cloud providers including Amazon S3, Google Cloud Storage, IBM Cloud Object Storage, Microsoft Azure Blob Storage, and OVH Object Storage by using the S3 and OpenStack Swift APIs.
-*  Spark’s static functions offer several ways to manipulate the date and time.
+*  Spark's static functions offer several ways to manipulate the date and time.
 *  You can download a file using Java nio classes and ingest it in Spark
 
 
@@ -308,7 +311,7 @@ Cluster Deployment
 *  Mesos and Kubernetes are standalone cluster managers, freeing you from the Hadoop dependencies.
 *  Support for Kubernetes in Spark has been added in version 2.3 and is constantly improving.
 *  All cluster managers support high availability.
-*  When dealing with files, all Spark’s workers need to have access to the same file or copy of the file.
+*  When dealing with files, all Spark's workers need to have access to the same file or copy of the file.
 *  HDFS is one option for large files. Files can be distributed over the cluster by using HDFS, part of Hadoop.
 *  Smaller files can be shared via a file server or a file-sharing service such as Box or Dropbox.
 *  Object stores like Amazon S3 or IBM COS can also be used to store large files.
