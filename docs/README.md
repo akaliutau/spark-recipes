@@ -133,7 +133,7 @@ Additionally one can implement translator for custom dialect
 
 *  Spark uses a standard connectivity to connect to DD (JDBC drivers). One can use properties or long URLs to connect to the database
 *  One can build a dedicated dialect to connect to data sources that are not available, and it's not very difficult.
-*  One can filter the ingested data by using the (<select statement>) <table alias> syntax instead of the table name.
+*  One can filter the ingested data by using the (select statement) table alias syntax instead of the table name.
 *  One can perform joins both at the database level, prior to ingesting in Spark, and in Spark.
 *  One can automatically assign data from the database in multiple partitions.
 *  Ingesting data from Elasticsearch follows the same principle as any other ingestion, connectivity is standard as well (through ES RESTful API). Technically very similar to JSON ingestion
@@ -158,7 +158,7 @@ Additionally one can implement translator for custom dialect
 *  [Structured Streaming Programming Guide](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
 *  Starting a Spark session is the same whether you are in batch or streaming mode.
 *  Streaming is a different paradigm from batch processing. One way to see streaming, especially in Spark, is as microbatching.
-*  You define a stream on a dataframe by using the readStream() method followed by the start() method.
+*  You define a stream on a dataframe by using the readStream() method followed by the start() method.
 *  You can specify ingestion format by using format(), and options by using option().
 *  The streaming query object, StreamingQuery, will help you query the stream.
 *  The destination of the data in the query is called a sink. It can be specified by using the format() method or the forEach() method.
@@ -186,8 +186,8 @@ Data transformation
 *  Data mapping builds a map of the data between the origin and the destination of the transformation.
 *  To help with data discovery and mapping, a definition of the origin data and structure should be available.
 *  Static functions are key to data transformation.
-*  The dataframe's cache() method allows caching and can help improve performance.
-*  expr() is a convenient function that allows you to compute an SQL-like statement when you are transforming the data.
+*  The dataframe's cache() method allows caching and can help improve performance.
+*  expr() is a convenient function that allows you to compute an SQL-like statement when you are transforming the data.
 *  A dataframe can contain arrays of values.
 *  Dataframes can be joined together, like tables in a relational database.
 *  Spark supports the following kinds of joins: inner, outer, left, right, left-semi, left-anti, and cross (super-set, or Cartesian).
@@ -224,11 +224,11 @@ Data aggregation
 =================
 
 *  Aggregations are a way to group data so you can look at the data from a higher, or macro, level.
-*  Apache Spark can perform aggregations on dataframes with Spark SQL (by creating a view) or the dataframe API.
+*  Apache Spark can perform aggregations on dataframes with Spark SQL (by creating a view) or the dataframe API.
 *  The groupBy() method is the equivalent of the SQL GROUP BY statement.
 *  Data needs to be prepared and cleaned before performing aggregations. Those steps can be done via transformations (chapter 12).
 *  Aggregations can be performed by methods chained after the groupBy() method, or by static functions inside the agg() method.
-*  Spark’s aggregations can be extended by custom user-defined aggregation functions (UDAFs).
+*  Spark’s aggregations can be extended by custom user-defined aggregation functions (UDAFs).
 *  A UDAF must be registered by name in your Spark session.
 *  A UDAF is called using the callUDF() method and the UDAF name.
 *  A UDAF is implemented as a class, which should implement several methods.
@@ -271,7 +271,7 @@ Cache and Checkpoints in Spark
 *  [The Internals of Apache Spark](https://books.japila.pl/apache-spark-internals/overview/), with git source at https://github.com/japila-books/apache-spark-internals
 *  As one way to increase performance, Spark offers (1) caching, (2a) eagerly checkpoints, and  (2b) non-eagerly (or lazy) checkpointing.
 *  Caching keeps the lineage data. You can trigger the cache by using cache() or persist(). Caching offers various levels of storage combining memory and disk.
-*  Checkpointing does not keep the lineage and saves the content of the dataframe to disk.
+*  Checkpointing does not keep the lineage and saves the content of the dataframe to disk.
 *  Lack of heap memory can become an issue with large datasets; Spark can use the off-heap/permgen space.
 *  Caching can use a combination of memory and disk.
 *  Checkpointing helps increase performance by saving the data contained in the dataframe to disk. An eager checkpoint performs the operation right away, while a non-eager or lazy operation will wait for an action.
@@ -294,7 +294,7 @@ Data pipelines
 *  Exporting data will export data from each partition, potentially resulting in several files being created
 *  Delta Lake is a database that lives in the Spark environment. You can persist your dataframes in Delta Lake (aka Data Lake)
 *  You can use the coalesce() method or the repartition() method to reduce the number of partitions.
-*  Apache Spark can access data stored in cloud providers including Amazon S3, Google Cloud Storage, IBM Cloud Object Storage, Microsoft Azure Blob Storage, and OVH Object Storage by using the S3 and OpenStack Swift APIs.
+*  Apache Spark can access data stored in cloud providers including Amazon S3, Google Cloud Storage, IBM Cloud Object Storage, Microsoft Azure Blob Storage, and OVH Object Storage by using the S3 and OpenStack Swift APIs.
 *  Spark’s static functions offer several ways to manipulate the date and time.
 *  You can download a file using Java nio classes and ingest it in Spark
 
@@ -306,7 +306,7 @@ Cluster Deployment
 *  Spark comes with its own resource manager called standalone mode, allowing to build a cluster without depending on other software components.
 *  YARN, a resource manager inherited from the Hadoop world, remains a popular choice, especially in hosted cloud environments.
 *  Mesos and Kubernetes are standalone cluster managers, freeing you from the Hadoop dependencies.
-*  Support for Kubernetes in Spark has been added in version 2.3 and is constantly improving.
+*  Support for Kubernetes in Spark has been added in version 2.3 and is constantly improving.
 *  All cluster managers support high availability.
 *  When dealing with files, all Spark’s workers need to have access to the same file or copy of the file.
 *  HDFS is one option for large files. Files can be distributed over the cluster by using HDFS, part of Hadoop.
@@ -314,6 +314,6 @@ Cluster Deployment
 *  Object stores like Amazon S3 or IBM COS can also be used to store large files.
 *  By default, security is not activated in Spark.
 *  For network communication, you can fine-tune the security per component. Most components accept both specific authentication and encryption on the wire.
-*  Temporary storage from Spark can be encrypted using the spark.io.encryption.* set of configuration entries.
+*  Temporary storage from Spark can be encrypted using the spark.io.encryption.* set of configuration entries.
 
 
