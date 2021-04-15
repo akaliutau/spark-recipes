@@ -22,7 +22,7 @@ Basics
 *  [Alternative Spark tutorial](https://www.datacamp.com/community/tutorials/apache-spark-tutorial-machine-learning)
 *  [15-min Spark tutorial](https://www.edureka.co/blog/spark-tutorial/)
 *  [Video tutorial](https://www.youtube.com/watch?v=QaoJNXW6SQo)
-*  The initial application built on the basis of Spark framework is the driver. Data may not have to come to the driver; it can be driven remotely.
+*  The initial application built on the basis of Spark framework is called the driver. Data may not have to come to the driver; it can be driven remotely.
 *  The driver connects to a master and gets a session. Data will be attached to this session; the session defines the life cycle of the data on the worker's nodes.
 *  The master can be local (on local machine) or a remote cluster. Using the local mode will not require you to build a cluster, making life much easier during development phase.
 *  Data is partitioned and processed within the partition. Partitions are in memory.
