@@ -15,6 +15,7 @@ What is it?
 *  Streaming is used more and more frequently in enterprises, as businesses want access to real-time analytics. Spark supports streaming.
 *  Analytics have evolved from simple joins and aggregations. Enterprises want computers to think for us; hence Spark supports machine learning and deep learning.
 *  Graphs are a special use case of analytics supported by Spark.
+*  Components in Spark ecosystem: Spark Core, Spark SQL, Spark Streaming, Spark MLlib, Spark GraphX, and SparkR
 
 Basics
 =======
@@ -109,7 +110,7 @@ Spark allows to ingest data from files. Alone with well-known file formats the s
 *  When ingesting files, you can use a regular expression to specify the path.
 *  CSV is more complex than it looks, but a rich set of options allows you to tune the parser.
 *  JSON exists in two forms: the one-line form called JSON Lines, and multiline JSON. Spark ingests both forms of JSON (since v2.2.0).
-*  All options for file ingestion that are described in this chapter are not casesensitive.
+*  All options for file ingestion are not casesensitive.
 *  Spark can ingest CSV, JSON, and text out of the box.
 *  To ingest XML, Spark needs a plugin provided by Databricks.
 *  The pattern for ingesting any document is fairly similar: you specify the format and simply read.
@@ -229,7 +230,7 @@ Data aggregation
 *  Aggregations are a way to group data so you can look at the data from a higher, or macro, level.
 *  Apache Spark can perform aggregations on dataframes with Spark SQL (by creating a view) or the dataframe API.
 *  The groupBy() method is the equivalent of the SQL GROUP BY statement.
-*  Data needs to be prepared and cleaned before performing aggregations. Those steps can be done via transformations (chapter 12).
+*  Data needs to be prepared and cleaned before performing aggregations. Those steps can be done via transformations.
 *  Aggregations can be performed by methods chained after the groupBy() method, or by static functions inside the agg() method.
 *  Spark's aggregations can be extended by custom user-defined aggregation functions (UDAFs).
 *  A UDAF must be registered by name in your Spark session.
@@ -305,6 +306,7 @@ Data pipelines
 Cluster Deployment
 ===================
 
+*  [Install Apache Spark on Multi-Node Cluster](https://data-flair.training/blogs/install-apache-spark-multi-node-cluster/)
 *  The role of the underlying operating system is to manage resources locally. However, when dealing with a cluster, there is need a cluster manager or a resource manager.
 *  Spark comes with its own resource manager called standalone mode, allowing to build a cluster without depending on other software components.
 *  YARN, a resource manager inherited from the Hadoop world, remains a popular choice, especially in hosted cloud environments.
