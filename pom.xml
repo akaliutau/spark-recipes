@@ -21,8 +21,6 @@
 		<lombok.version>1.18.12</lombok.version>
 		<junit.version>4.12</junit.version>
 		<logback.version>1.2.3</logback.version>
-		<!-- build versions -->
-		<easyrpa.build.version>${project.version}</easyrpa.build.version>
 	</properties>
 
 	<!-- sub modules -->
