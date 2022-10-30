@@ -12,7 +12,7 @@ You will need:
 1. Clone this project
 
 ```
-git clone https://github.com/akalu/spark-recipes
+git clone https://github.com/akaliutau/spark-recipes
 ```
 
 All code are put into namespace net.ddp which stands for distributed data processing
